@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOAN CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cendiv">
+        <div id="info" style="align-items: right;">
+            <h1 id="head">LOAN CALCULATOR</h1>
+            <br>
+            <br>
+            <label for="box1" >Loan Amount (₦):</label> 
+            <input type="number" name="lAmount" id="box1">
+            <br>
+            <br>
+        
+            <label for="box2">Interest Rate Amount:</label> 
+            <input type="number" name="rAmount" id="box2">
+            <br>
+            <br>
+        
+            <label for="box3">Month Amount:</label> 
+            <input type="number" name="month" id="box3" >
+            <br>
+            <br>
+        
+            <label for="mTotal">Total Amount monthly:</label>
+
+            <h3 id="mTotal"></h3>
+            <br>
+            <br>
+
+            <label for="Total">Total Amount :</label> 
+            <h3 id="Total"></h3>
+            <br>
+
+            <button onclick="press()">CALCULATE</button>
+        </div>
+    </div>
+    
+    <script>
+        function press(){
+        var a = Number(document.getElementById("box1").value) ;
+        var b = Number(document.getElementById("box2").value) ;
+        var c = Number(document.getElementById("box3").value) ;
+
+
+            if (a == "" || a== null){
+                alert("Enter Loan Amount!")
+            }else if (a < 5000 || a >2000000){
+                alert("Enter Loan Amount between 5000-2000000")
+            }else if (b == "" || b== null){
+                alert("Enter Interest Rate!")
+            }else if (b < 1 || b >40){
+                alert("Enter Interest Rate between 1-40%")
+            }else if (c == "" || c== null){
+                alert("Enter Total Months!")
+            }else if (c < 1 || c >24){
+                alert("Enter Months between 1-24")
+            }
+            else{
+               var total = (a+(a*(b/100))).toFixed(2);
+               var mtotal = (total/c).toFixed(2);
+            }
+        document.getElementById("Total").innerHTML = "₦" + total.toString();
+        document.getElementById("mTotal").innerHTML = "₦" + mtotal.toString();
+
+        }
+       
+    </script>
+</body>
+</html>
