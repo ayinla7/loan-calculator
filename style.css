@@ -7,7 +7,7 @@
         display: flex;
         justify-content: center;
         align-items: center;    
-    background-color: rgb(226, 113, 21);   
+        background-color: deepskyblue;
  }
 
 
@@ -31,13 +31,13 @@ button{
     margin-top: 20px;
     margin-left: auto;
     font-weight: bolder;
-    background-color: deepskyblue;
+    background-color: white;
 
     border-radius: 10px;
     float: right;
 border-style: none;
 }
 button:hover{
-    background-color: red;
-    color: deepskyblue;
+    background-color: deepskyblue;
+    color: white;
 }
