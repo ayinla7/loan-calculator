@@ -38,6 +38,6 @@ button{
 border-style: none;
 }
 button:hover{
-    background-color: deepskyblue;
+    background-color: lightblue;
     color: white;
 }
