@@ -1,8 +1,7 @@
 *{
     margin: 0;
-    font-family: cursive;
-
 }
+
 #cendiv{
         min-height: 100vh; /* height of the browser viewport */
         display: flex;
@@ -32,7 +31,7 @@ button{
     margin-top: 20px;
     margin-left: auto;
     font-weight: bolder;
-    background-color: cornsilk;
+    background-color: deepskyblue;
 
     border-radius: 10px;
     float: right;
@@ -40,5 +39,5 @@ border-style: none;
 }
 button:hover{
     background-color: red;
-    color: cornsilk;
+    color: deepskyblue;
 }
